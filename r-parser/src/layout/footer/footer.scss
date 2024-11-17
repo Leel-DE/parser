@@ -1,0 +1,21 @@
+.footer {
+  background-color: hsl(263.08deg 25.07% 16.2%);
+  color: white;
+  &__wrapper{
+    flex-direction: column;
+  }
+  &-top{
+    display: flex;
+    gap: 50px;
+    .footer-social{
+      flex: 1 1 35%;
+      text-wrap: balance;
+    }
+    .footer-links-grid{
+      flex: 1 1 65%;
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+  }
+}

@@ -2,8 +2,8 @@
   position: sticky;
   z-index: 99;
   top: 0;
-  background-color: rgba(196, 196, 213, 0.7);
-
+  background-color: hsl(263.08deg 25.07% 16.2%);
+  color: white;
 
   .nav-burger{
     .burger-btn {
@@ -16,6 +16,18 @@
       .nav-list{
         position: absolute;
         left: -9999px;
+        &-item{
+          font-size: 32px;
+          margin: 10px 0;
+          transition: color 0.3s, transform 0.3s;
+          a {
+            display: block;
+          }
+          &:hover{
+            transform: translateX(10px);
+            color: #06BFFF;
+          }
+        }
       }
       .nav-list--open{
         display: flex;
@@ -25,7 +37,7 @@
         flex-grow: revert;
         flex-direction: column;
         min-height: 100vh;
-        background: hsla(252,13%,46%,1);
+        background: hsl(263.08deg 25.07% 16.2%);
         width: 100%;
         top: 100%;
         transition: left 0.3s;
