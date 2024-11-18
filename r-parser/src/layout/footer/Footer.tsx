@@ -8,7 +8,7 @@ interface testProps {
 const Footer: FC<testProps> = ({content}) => {
     return (
         <footer className="footer">
-            <div className="footer__wrapper flex container my-5 mx-auto pt-32">
+            <div className="footer__wrapper flex container my-5 mx-auto px-5 pt-32">
                 <div className="footer-top">
                     <div className="footer-social">
                         <div className="footer-social__wrapper">
