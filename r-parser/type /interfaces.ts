@@ -7,7 +7,7 @@ export interface titleComponentProps {
     titleContent: string,
 }
 
-export interface aboutSectionProps{
+export interface aboutSectionProps {
     title:string,
     description: string
 }
