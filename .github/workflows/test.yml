@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: node12
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,10 +22,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd r-parser  # Переход в подкаталог нового проекта
+          cd ..
+          cd ./r-parser 
           npm install
 
       - name: Run tests
         run: |
-          cd r-parser  # Переход в подкаталог нового проекта
+          cd ..  
+          cd ./r-parser  
           npm test
