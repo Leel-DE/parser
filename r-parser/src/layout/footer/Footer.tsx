@@ -18,11 +18,11 @@ const Footer: FC<testProps> = ({content}) => {
                             </span>
                             <div className="footer-social__links-container">
                                 <ul>
-                                    <li><a href="">facebook</a></li>
-                                    <li><a href="">Instagram</a></li>
-                                    <li><a href="">LinkedIn</a></li>
-                                    <li><a href="">Github</a></li>
-                                    <li><a href="">YouTube</a></li>
+                                    <li><a href=""> <i className="icon-facebook"></i></a></li>
+                                    <li><a href=""> <i className="icon-instagram"></i></a></li>
+                                    <li><a href=""> <i className="icon-linkedin"></i></a></li>
+                                    <li><a href=""> <i className="icon-github"></i></a></li>
+                                    <li><a href=""> <i className="icon-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
