@@ -22,10 +22,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd ../../r-parser/
+          cd ./../../r-parser/
           npm install
 
       - name: Run tests
         run: |
-          cd ../../r-parser/ 
+          cd ./../../r-parser/ 
           npm test
