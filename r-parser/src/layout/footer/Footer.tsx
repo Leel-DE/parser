@@ -1,5 +1,4 @@
 import {FC} from "react";
-import logo from "../../assets/logo.svg";
 
 interface testProps {
     content: string
@@ -12,17 +11,36 @@ const Footer: FC<testProps> = ({content}) => {
                 <div className="footer-top">
                     <div className="footer-social">
                         <div className="footer-social__wrapper">
-                            <img src={logo} alt="Logo" className="nav-logo-img w-11"/>
+                            <i className="icon-logo nav-logo-img w-11"/>
                             <span className="footer-social-text">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus dolor exercitationem impedit libero nostrum numquam soluta sunt tempora veniam!
                             </span>
                             <div className="footer-social__links-container">
                                 <ul>
-                                    <li><a href=""> <i className="icon-facebook"></i></a></li>
-                                    <li><a href=""> <i className="icon-instagram"></i></a></li>
-                                    <li><a href=""> <i className="icon-linkedin"></i></a></li>
-                                    <li><a href=""> <i className="icon-github"></i></a></li>
-                                    <li><a href=""> <i className="icon-youtube"></i></a></li>
+                                    <li>
+                                        <a href="">
+                                            <i className="icon-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li><a href="">
+                                        <i className="icon-instagram"></i>
+                                    </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i className="icon-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i className="icon-github"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i className="icon-youtube"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

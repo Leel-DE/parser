@@ -1,21 +1,48 @@
 .footer {
   background-color: hsl(263.08deg 25.07% 16.2%);
   color: white;
-  &__wrapper{
+
+  &__wrapper {
     flex-direction: column;
   }
-  &-top{
+
+  &-top {
     display: flex;
     gap: 50px;
-    .footer-social{
+
+    .footer-social {
       flex: 1 1 35%;
       text-wrap: balance;
     }
-    .footer-links-grid{
+
+    .footer-links-grid {
       flex: 1 1 65%;
       display: flex;
       gap: 2rem;
       justify-content: space-between;
     }
+  }
+
+  &-social__links-container ul {
+    display: flex;
+    max-width: 300px;
+    gap: 20px;
+    font-size: 32px;
+    margin: 15px 0;
+  }
+
+  & .nav-logo-img {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 43px;
+    position: relative;
+    z-index: 999;
+    border: 1px solid;
+    border-radius: 50%;
+  }
+
+  &__column-title {
+    display: block;
+    margin-bottom: 10px;
   }
 }
