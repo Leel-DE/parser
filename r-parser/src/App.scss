@@ -1,6 +1,4 @@
-@import 'layout/main.scss';
-@import 'components/main.scss';
-@import 'views/views.scss';
-@import 'sections/sections.scss';
-
-// icoMoon add style
+@use 'layout/main.scss' as *;
+@use 'components/main.scss' as *;
+@use 'views/views.scss' as *;
+@use 'sections/sections.scss' as *;

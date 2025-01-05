@@ -1,4 +1,4 @@
-@import 'normalize.scss';
-@import 'reset.scss';
-@import 'header/header.scss';
-@import 'footer/footer.scss';
+@use 'normalize.scss' as *;
+@use 'reset.scss' as *;
+@use 'header/header.scss' as *;
+@use 'footer/footer.scss' as *;
