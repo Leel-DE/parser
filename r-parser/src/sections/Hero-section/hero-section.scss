@@ -3,10 +3,9 @@
   width: 100%;
   position: relative;
   display: flex;
-  &-wrapper{
+  &-wrapper {
     @media (min-width: 768px) {
       margin: auto;
-
     }
   }
   &_bg-image {
@@ -15,7 +14,7 @@
     object-fit: cover;
     z-index: -1;
   }
-  &_description-content-text{
+  &_description-content-text {
     @media (min-width: 768px) {
       max-width: 85%;
     }
