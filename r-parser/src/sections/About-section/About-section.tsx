@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {aboutSectionProps} from "../../../type /interfaces.ts";
+import {aboutSectionProps} from "../../types/interfaces.ts";
 import Title from "../../components/Title/Title.tsx";
 
 const AboutSection:FC<aboutSectionProps> = ({title, description}) => {

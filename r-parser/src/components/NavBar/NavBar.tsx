@@ -1,5 +1,5 @@
 import {FC, useState,} from "react";
-import {navProps} from "../../../type /interfaces.ts";
+import {navProps} from "../../types/interfaces.ts";
 import {NavLink} from "react-router-dom";
 
 const NavBar: FC<navProps> = ({ menuItems }) => {

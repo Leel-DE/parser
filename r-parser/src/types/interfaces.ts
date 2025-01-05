@@ -5,6 +5,7 @@ export interface navProps {
 export interface titleComponentProps {
     modificationClass?: string,
     titleContent: string,
+    description?: string
 }
 
 export interface aboutSectionProps {
