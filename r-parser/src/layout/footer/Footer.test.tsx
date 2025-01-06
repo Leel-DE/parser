@@ -1,28 +1,51 @@
 import { render, screen } from '@testing-library/react';
-import Footer from './Footer.tsx';
-import '@testing-library/jest-dom';
+import Footer from './Footer';
 
 describe('Footer Component', () => {
-  const testContent = 'Test Footer Content';
+  const testContent = '© 2025 Your Company. All rights reserved.';
 
-  test('renders Footer with content', () => {
+  it('renders all footer links and columns correctly', () => {
     render(<Footer content={testContent} />);
 
-    // Проверяем, что текст content отображается
+    const columnTitles = ['Company', 'Resources', 'Legal', 'Social'];
+    columnTitles.forEach((title) => {
+      expect(screen.getByText(title)).toBeInTheDocument();
+    });
+
+    const allLinks = [
+      'About Us',
+      'Careers',
+      'Press',
+      'Blog',
+      'Contact',
+      'Help Center',
+      'Documentation',
+      'API Reference',
+      'Community Forum',
+      'Status',
+      'Privacy Policy',
+      'Terms of Service',
+      'Cookie Policy',
+      'Security',
+      'GDPR',
+      'Facebook',
+      'Twitter',
+      'LinkedIn',
+      'Instagram',
+      'YouTube',
+    ];
+    allLinks.forEach((link) => {
+      expect(screen.getByText(link)).toBeInTheDocument();
+    });
+
     expect(screen.getByText(testContent)).toBeInTheDocument();
   });
 
-  test('renders social media icons', () => {
-    render(<Footer content={testContent} />);
-
-    const socialMediaIcons = screen.getAllByRole('link');
-    expect(socialMediaIcons.length).toBe(20); // Проверяем, что 5 социальных иконок
-  });
-
-  test('renders FooterGridColumn links', () => {
-    render(<Footer content={testContent} />);
-
-    const footerLinks = screen.getAllByRole('link', { name: /item/i });
-    expect(footerLinks.length).toBe(20); // Учитываем, что у нас 4 колонки по 5 ссылок
+  it('renders social media icons', () => {
+    const { container } = render(<Footer content={testContent} />);
+    const socialIcons = container.querySelectorAll(
+        '.icon-facebook, .icon-instagram, .icon-linkedin, .icon-github, .icon-youtube'
+    );
+    expect(socialIcons.length).toBe(5);
   });
 });
