@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import FooterGridColumn from '../../components/FooterGridColumn/FooterGridColumn.tsx';
 
 interface testProps {
   content: string;
@@ -49,94 +50,40 @@ const Footer: FC<testProps> = ({ content }) => {
             </div>
           </div>
           <div className="footer-links-grid">
-            <div className="footer-links-grid__wrapper">
-              <div className="footer-links-grid__column">
-                <span className="footer__column-title">Title</span>
-                <ul>
-                  <li>
-                    <a href="#">item1</a>
-                  </li>
-                  <li>
-                    <a href="#">item2</a>
-                  </li>
-                  <li>
-                    <a href="#">item3</a>
-                  </li>
-                  <li>
-                    <a href="#">item4</a>
-                  </li>
-                  <li>
-                    <a href="#">item5</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-links-grid__wrapper">
-              <div className="footer-links-grid__column">
-                <span className="footer__column-title">Title</span>
-                <ul>
-                  <li>
-                    <a href="#">item1</a>
-                  </li>
-                  <li>
-                    <a href="#">item2</a>
-                  </li>
-                  <li>
-                    <a href="#">item3</a>
-                  </li>
-                  <li>
-                    <a href="#">item4</a>
-                  </li>
-                  <li>
-                    <a href="#">item5</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-links-grid__wrapper">
-              <div className="footer-links-grid__column">
-                <span className="footer__column-title">Title</span>
-                <ul>
-                  <li>
-                    <a href="#">item1</a>
-                  </li>
-                  <li>
-                    <a href="#">item2</a>
-                  </li>
-                  <li>
-                    <a href="#">item3</a>
-                  </li>
-                  <li>
-                    <a href="#">item4</a>
-                  </li>
-                  <li>
-                    <a href="#">item5</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="footer-links-grid__wrapper">
-              <div className="footer-links-grid__column">
-                <span className="footer__column-title">Title</span>
-                <ul>
-                  <li>
-                    <a href="#">item1</a>
-                  </li>
-                  <li>
-                    <a href="#">item2</a>
-                  </li>
-                  <li>
-                    <a href="#">item3</a>
-                  </li>
-                  <li>
-                    <a href="#">item4</a>
-                  </li>
-                  <li>
-                    <a href="#">item5</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <FooterGridColumn
+              title="Company"
+              gridItems={['About Us', 'Careers', 'Press', 'Blog', 'Contact']}
+            />
+            <FooterGridColumn
+              title="Resources"
+              gridItems={[
+                'Help Center',
+                'Documentation',
+                'API Reference',
+                'Community Forum',
+                'Status',
+              ]}
+            />
+            <FooterGridColumn
+              title="Legal"
+              gridItems={[
+                'Privacy Policy',
+                'Terms of Service',
+                'Cookie Policy',
+                'Security',
+                'GDPR',
+              ]}
+            />
+            <FooterGridColumn
+              title="Social"
+              gridItems={[
+                'Facebook',
+                'Twitter',
+                'LinkedIn',
+                'Instagram',
+                'YouTube',
+              ]}
+            />
           </div>
         </div>
         <div className="footer-bott">

@@ -15,3 +15,8 @@ export interface aboutSectionProps {
   title: string;
   description: string;
 }
+
+export interface FooterGridColumnProps {
+  title: string;
+  gridItems: string[];
+}

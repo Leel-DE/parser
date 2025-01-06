@@ -19,7 +19,7 @@ describe('Footer Component', () => {
     expect(socialMediaIcons.length).toBe(20); // Проверяем, что 5 социальных иконок
   });
 
-  test('renders footer links', () => {
+  test('renders FooterGridColumn links', () => {
     render(<Footer content={testContent} />);
 
     const footerLinks = screen.getAllByRole('link', { name: /item/i });
