@@ -44,7 +44,7 @@ describe('Footer Component', () => {
   it('renders social media icons', () => {
     const { container } = render(<Footer content={testContent} />);
     const socialIcons = container.querySelectorAll(
-        '.icon-facebook, .icon-instagram, .icon-linkedin, .icon-github, .icon-youtube'
+      '.icon-facebook, .icon-instagram, .icon-linkedin, .icon-github, .icon-youtube'
     );
     expect(socialIcons.length).toBe(5);
   });

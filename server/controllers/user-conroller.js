@@ -1,28 +1,17 @@
-const { MongoClient } = require('mongodb');
-
 const getAllUsers = async (req, res) => {
-    const uri = process.env.MONGO_URI;
-    const client = new MongoClient(uri);
-
     try {
-        await client.connect();
-        console.log('Connected to MongoDB');
+        const database = req.app.locals.db; // Используем подключение из `app.locals`
+        if (!database) {
+            return res.status(500).send('Database connection is not initialized');
+        }
 
-        const database = client.db('parser'); 
-        const collection = database.collection('users'); 
+        const collection = database.collection('users'); // Указываем коллекцию
+        const users = await collection.find({}).toArray(); // Запрашиваем все данные
 
-     
-        const users = await collection.find({}).toArray();
-
-     
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
+        res.status(200).json(users); // Отправляем JSON ответ
     } catch (err) {
         console.error('Error fetching users:', err);
         res.status(500).send('Server Error');
-    } finally {
-        await client.close();
-        console.log('Connection to MongoDB closed');
     }
 };
 

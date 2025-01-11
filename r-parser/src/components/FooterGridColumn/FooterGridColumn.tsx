@@ -9,7 +9,7 @@ const FooterGridColumn: FC<FooterGridColumnProps> = ({ title, gridItems }) => {
         <ul>
           {gridItems.map((gridItem) => {
             return (
-              <li key={Date.now()+Math.random()}>
+              <li key={Date.now() + Math.random()}>
                 <a href="#">{gridItem}</a>
               </li>
             );
