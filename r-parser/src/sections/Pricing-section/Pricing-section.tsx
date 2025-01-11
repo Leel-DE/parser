@@ -10,14 +10,11 @@ const PricingSection: FC<testProps> = ({ testContent }) => {
   return (
     <section className={'pricing-section'}>
       <h1>{testContent}</h1>
-      <div className="pricing__wrapper container items-center my-20 mx-auto px-5">
+      <div className="pricing__wrapper container my-20 px-5">
         <div className="pricing__top-container">
           <Title
             titleContent={title}
-            titleClass="mb-3 text-center"
-            label={'pricing'}
-            labelClass={'text-center block'}
-            descriptionClass={'text-center'}
+            titleClass="mb-3 "
             description={
               'Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.'
             }

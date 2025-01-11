@@ -1,25 +1,24 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
-const customSelectorsSchema = new Schema({
-    name: { type: String, required: true },
-    price: { type: String, required: true },
-    imgUrl: { type: String, required: true },
+const customSelectorsSchema = new mongoose.Schema({
+    name: String,
+    price: String,
+    imgUrl: String,
 });
 
-const pageSchema = new Schema({
-    pageUrl: { type: String, required: true },
-    cardSelector: { type: String, required: true },
+const pageSchema = new mongoose.Schema({
+    pageUrl: String,
+    cardSelector: String,
     customSelectors: [customSelectorsSchema],
 });
 
-const storeBoxSchema = new Schema({
-    title: { type: String, required: true },
-    logo: { type: String, required: true },
+const storeBoxSchema = new mongoose.Schema({
+    title: String,
+    logo: String,
     pages: [pageSchema],
 });
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     login: { type: String, required: true, unique: true },
     password: { type: String, required: true },
