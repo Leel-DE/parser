@@ -20,16 +20,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Find r-parser folder and install dependencies
+      - name: Navigate to project root and install dependencies
         run: |
-          PROJECT_DIR=$(find . -type d -name 'parser' -print -quit)
-          echo "Found r-parser at $PROJECT_DIR"
-          cd $PROJECT_DIR
+          cd ../..
+          echo "Moved to project root: $(pwd)"
           npm install
 
       - name: Run tests
         run: |
-          PROJECT_DIR=$(find . -type d -name 'parser' -print -quit)
-          echo "Found r-parser at $PROJECT_DIR"
-          cd $PROJECT_DIR
+          cd ../..
+          echo "Moved to project root: $(pwd)"
           npm test
