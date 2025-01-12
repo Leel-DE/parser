@@ -20,14 +20,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Navigate to project root and install dependencies
+      - name: Find package.json and install dependencies
         run: |
-          cd ../..
-          echo "Moved to project root: $(pwd)"
+          PROJECT_DIR=$(dirname $(find . -name 'package.json' -print -quit))
+          echo "Found package.json at $PROJECT_DIR"
+          cd $PROJECT_DIR
           npm install
 
       - name: Run tests
         run: |
-          cd ../..
-          echo "Moved to project root: $(pwd)"
+          PROJECT_DIR=$(dirname $(find . -name 'package.json' -print -quit))
+          echo "Found package.json at $PROJECT_DIR"
+          cd $PROJECT_DIR
           npm test
