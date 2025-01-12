@@ -22,14 +22,14 @@ jobs:
 
       - name: Find r-parser folder and install dependencies
         run: |
-          PROJECT_DIR=$(find . -type d -name 'r-parser' -print -quit)
+          PROJECT_DIR=$(find . -type d -name 'parser' -print -quit)
           echo "Found r-parser at $PROJECT_DIR"
           cd $PROJECT_DIR
           npm install
 
       - name: Run tests
         run: |
-          PROJECT_DIR=$(find . -type d -name 'r-parser' -print -quit)
+          PROJECT_DIR=$(find . -type d -name 'parser' -print -quit)
           echo "Found r-parser at $PROJECT_DIR"
           cd $PROJECT_DIR
           npm test
