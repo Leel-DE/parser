@@ -1,16 +1,15 @@
 import { FC } from 'react';
 import Title from '../../components/Title/Title.tsx';
+import PricingCard from '../../components/Cards/PricingCard.tsx';
 
-interface testProps {
-  testContent: string;
+interface pricingProps {
+  title: string;
 }
 
-const PricingSection: FC<testProps> = ({ testContent }) => {
-  const title: string = 'Choose the right plan for you ';
+const PricingSection: FC<pricingProps> = ({ title }) => {
   return (
     <section className={'pricing-section'}>
-      <h1>{testContent}</h1>
-      <div className="pricing__wrapper container my-20 px-5">
+      <div className="pricing__wrapper container items-center my-20 mx-auto px-5">
         <div className="pricing__top-container">
           <Title
             titleContent={title}
@@ -20,7 +19,31 @@ const PricingSection: FC<testProps> = ({ testContent }) => {
             }
           />
         </div>
-        <div className="pricing__bott-container">BOTTOM</div>
+        <div className="pricing__bott-container">
+            <div className="pricing__cards-wrapper">
+              <PricingCard
+                label='label'
+                headText='head text'
+                price={21}
+                btnText='ololo btn'
+                features={['feature!','asdasd','asdasda']}
+              />
+              <PricingCard
+                label='label'
+                headText='head text'
+                price={21}
+                btnText='ololo btn'
+                features={['feature!','asdasd','asdasda']}
+              />
+              <PricingCard
+                label='label'
+                headText='head text'
+                price={21}
+                btnText='ololo btn'
+                features={['feature!','asdasd','asdasda']}
+              />
+            </div>
+          </div>
       </div>
     </section>
   );

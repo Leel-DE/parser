@@ -10,9 +10,9 @@ const LandingPage: FC = () => {
     <>
       <HeroSection />
       <AboutSection title={'About Us'} description={content} />
-      <PricingSection testContent={'asdasad'} />
+      <PricingSection title={'Choose your plan'} />
     </>
   );
-};
+};  
 
 export default LandingPage;

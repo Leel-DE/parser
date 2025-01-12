@@ -6,7 +6,7 @@ describe('Footer Component', () => {
   const testContent = 'Test Pricing Content';
 
   test('renders Footer with content', () => {
-    render(<PricingSection testContent={testContent} />);
+    render(<PricingSection title={testContent} />);
 
     expect(screen.getByText(testContent)).toBeInTheDocument();
   });
