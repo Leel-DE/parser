@@ -1,5 +1,12 @@
 .pricing{
+    &-section{
+    }
 &__cards-wrapper{
     display: flex;
+    color: white;
+    
+}
+&__bott-container{
+    background-image: radial-gradient(circle at center center,#7775D6,#592E71,#030712 70%);
 }
 }

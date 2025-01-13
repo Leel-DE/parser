@@ -9,8 +9,8 @@ interface pricingProps {
 const PricingSection: FC<pricingProps> = ({ title }) => {
   return (
     <section className={'pricing-section'}>
-      <div className="pricing__wrapper container items-center my-20 mx-auto px-5">
-        <div className="pricing__top-container">
+      <div className="pricing__wrapper items-center my-20 mx-auto">
+        <div className="pricing__top-container container px-5 items-center my-20 mx-auto">
           <Title
             titleContent={title}
             titleClass="mb-3 "
@@ -19,8 +19,8 @@ const PricingSection: FC<pricingProps> = ({ title }) => {
             }
           />
         </div>
-        <div className="pricing__bott-container">
-            <div className="pricing__cards-wrapper">
+        <div className="pricing__bott-container ">
+            <div className="pricing__cards-wrapper container px-5 items-center my-20 mx-auto">
               <PricingCard
                 label='label'
                 headText='head text'
