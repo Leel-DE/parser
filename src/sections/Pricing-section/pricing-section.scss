@@ -1,12 +1,15 @@
-.pricing{
-    &-section{
-    }
-&__cards-wrapper{
-    display: flex;
-    color: white;
-    
-}
-&__bott-container{
-    background-image: radial-gradient(circle at center center,#7775D6,#592E71,#030712 71%);
-}
+.pricing {
+  &-section {
+    background-color: #ffffff;
+  }
+  &__cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    color: inherit;
+  }
+  &__bott-container {
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    padding: 2rem 0 3rem;
+  }
 }

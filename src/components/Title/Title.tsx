@@ -12,9 +12,9 @@ const Title: FC<TitleComponentProps> = ({
   return (
     <div className="title-container">
       {label && <span className={`label ${labelClass}`}>{label}</span>}
-      <h1 className={`main-title text-6xl ${titleClass}`}>{titleContent}</h1>
+      <h1 className={`main-title text-5xl md:text-6xl font-semibold ${titleClass}`}>{titleContent}</h1>
       {description && (
-        <p className={`description ${descriptionClass}`}>{description}</p>
+        <p className={`description text-gray-600 ${descriptionClass}`}>{description}</p>
       )}
     </div>
   );
