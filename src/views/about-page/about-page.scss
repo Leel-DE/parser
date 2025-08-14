@@ -1,0 +1,60 @@
+.about-page {
+  .hero-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  .mission-section {
+    .bg-gradient-to-br {
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    }
+  }
+
+  .values-section {
+    .bg-white {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .team-section {
+    .w-32 {
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .contact-cta {
+    button {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 3rem 0;
+    }
+    
+    .mission-section,
+    .values-section,
+    .team-section,
+    .contact-cta {
+      padding: 3rem 0;
+    }
+    
+    .grid {
+      gap: 1.5rem;
+    }
+  }
+}

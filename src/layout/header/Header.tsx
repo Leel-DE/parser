@@ -4,11 +4,10 @@ import logo from '../../assets/logo.svg';
 
 const Header: FC = () => {
   const navBarItems: string[] = [
+    'Home',
     'About',
-    'login',
-    'logOut',
-    'Welcome',
-    'Price',
+    'Pricing',
+    'Contact',
   ];
   return (
     <section className="nav-section">

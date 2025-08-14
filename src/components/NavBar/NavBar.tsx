@@ -1,12 +1,28 @@
 import { FC, useState } from 'react';
 import { navProps } from '../../types/interfaces.ts';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const NavBar: FC<navProps> = ({ menuItems }) => {
   const [burgerToggle, setBurgerToggle] = useState(false);
+  const location = useLocation();
 
   const burgerToggles = () => {
     setBurgerToggle(!burgerToggle);
+  };
+
+  const getNavLink = (item: string) => {
+    switch (item.toLowerCase()) {
+      case 'home':
+        return '/';
+      case 'about':
+        return '/about';
+      case 'pricing':
+        return '/#pricing';
+      case 'contact':
+        return '/#contact';
+      default:
+        return `/${item.toLowerCase()}`;
+    }
   };
 
   return (
@@ -21,7 +37,14 @@ const NavBar: FC<navProps> = ({ menuItems }) => {
                 className={`nav-list-item mr-2`}
                 key={Date.now() + Math.random()}
               >
-                <NavLink to={`/${navItem.toLowerCase()}`}>{navItem}</NavLink>
+                <NavLink 
+                  to={getNavLink(navItem)}
+                  className={({ isActive }) => 
+                    isActive ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'
+                  }
+                >
+                  {navItem}
+                </NavLink>
               </li>
             ))
           : 'no props'}

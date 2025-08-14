@@ -7,6 +7,7 @@ import './index.css';
 
 import ErrorPage from './views/error-page/error-page.tsx';
 import App from './App.tsx';
+import AboutPage from './views/about-page/about-page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/about',
+    element: <AboutPage />,
     errorElement: <ErrorPage />,
   },
 ]);
